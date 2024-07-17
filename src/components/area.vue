@@ -1,9 +1,9 @@
 <template>
------------------------
+<!-- -----------------------
 <p class="area">我收到了父组件的数据：{{ name }}{{ props.age }}</p>
 <slot></slot>
 
-<button @click="saymimi">点我给父组件说我的秘密</button>
+<button @click="saymimi">点我给父组件说我的秘密</button> -->
   <el-form
     ref="ruleFormRef"
     style="max-width: 600px"
@@ -100,12 +100,12 @@
 import { reactive, ref } from 'vue'
 import type { ComponentSize, FormInstance, FormRules } from 'element-plus'
 
-const props = defineProps(["name", "age"])
+// const props = defineProps(["name", "age"])
 
-let $emit = defineEmits(['mimi'])
-const saymimi = function(){
-    $emit('mimi', '是邓紫棋的我的秘密啦')
-}
+// let $emit = defineEmits(['mimi'])
+// const saymimi = function(){
+//     $emit('mimi', '是邓紫棋的我的秘密啦')
+// }
 
 interface RuleForm {
   name: string
