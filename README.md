@@ -6,7 +6,7 @@ vite+vue3+ts
 
 ```bash
 git clone https://github.com/zhangfangxu/vite-project-nody.git <project-name>
-cd <project-name>
+cd vite-project-nody
 npm install or yarn
 ```
 
@@ -20,7 +20,7 @@ npm run dev or yarn dev
 ```bash
 npm run build or yarn build
 ``` 
-##运行打包文件dist
+## 预览运行打包文件dist
 
 ```bash
 npm run preview or yarn preview
