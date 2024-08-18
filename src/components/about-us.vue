@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
-const src = ref("/src/assets/about-us.png");
+import src from '/src/assets/about-us.png';
+import { Shop } from '@element-plus/icons-vue';
+
 </script>
 
 <template>

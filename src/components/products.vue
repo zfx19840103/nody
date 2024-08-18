@@ -1,12 +1,18 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import src1 from '/src/assets/14684.jpg';
+import src2 from '/src/assets/14670.jpg';
+import src3 from '/src/assets/14676.jpg';
+//引入工具类
+// import pubUse from '../utils/pubUse.ts';
+
 const data = [
 	{
 		id: 1,
 		name: "商品1",
 		price: 100,
 		description: "这是商品1的描述",
-		src: "/src/assets/14676.jpg",
+		src: src1,
 		status: 1
 	},
 	{
@@ -14,7 +20,7 @@ const data = [
 		name: "商品2",
 		price: 200,
 		description: "这是商品2的描述",
-		src: "/src/assets/14684.jpg",
+		src: src2,
 		status: 1
 	},
 	{
@@ -22,10 +28,11 @@ const data = [
 		name: "商品3",
 		price: 300,
 		description: "这是商品3的描述",
-		src: "/src/assets/project3.jpg",
+		src: src3,
 		status: 1
 	}
 ];
+
 </script>
 
 <template>

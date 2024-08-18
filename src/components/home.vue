@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-const src = ref("/src/assets/homeBanner.jpg");
+import src from '/src/assets/homeBanner.jpg';
+
 </script>
 
 <template>
