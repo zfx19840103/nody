@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import src1 from '/src/assets/14684.jpg';
-import src2 from '/src/assets/14670.jpg';
-import src3 from '/src/assets/14676.jpg';
+import src1 from "/src/assets/14670.jpg";
+import src2 from "/src/assets/loop1.png";
+import src3 from "/src/assets/loop2.png";
+import src4 from "/src/assets/loop3.png";
+import src5 from "/src/assets/loop5.png";
 //引入工具类
 // import pubUse from '../utils/pubUse.ts';
 
@@ -30,9 +32,24 @@ const data = [
 		description: "这是商品3的描述",
 		src: src3,
 		status: 1
+	},
+	{
+		id: 4,
+		name: "商品4",
+		price: 400,
+		description: "这是商品4的描述",
+		src: src4,
+		status: 1
+	},
+	{
+		id: 5,
+		name: "商品5",
+		price: 500,
+		description: "这是商品5的描述",
+		src: src5,
+		status: 1
 	}
 ];
-
 </script>
 
 <template>
@@ -48,7 +65,7 @@ const data = [
 <style scoped>
 .products {
 	padding-top: 80px;
-  margin: -50px 0 0;
+	margin: -50px 0 80px;
 	width: 100%;
 	height: 600px;
 }
@@ -61,7 +78,7 @@ const data = [
 }
 
 .el-carousel__item:nth-child(2n) {
-	background-color: #99a9bf;
+	background-color: #f9f9f9;
 }
 
 .el-carousel__item:nth-child(2n + 1) {
@@ -69,7 +86,8 @@ const data = [
 }
 .carousel-img {
 	width: 100%;
-	height: 100%;
+	max-height: 100%;
 	object-fit: cover;
+	margin: auto;
 }
 </style>

@@ -44,7 +44,7 @@ import { Shop } from '@element-plus/icons-vue';
 						<li>
 							<el-row>
 								<el-col :span="8">
-									<img src="../assets/14670.jpg" alt="about us mission" />
+									<img src="../assets/14676.jpg" alt="about us mission" />
 								</el-col>
 								<el-col :span="15" :offset="1">
 									<h3>Our Mission perspiciatis</h3>
@@ -56,11 +56,11 @@ import { Shop } from '@element-plus/icons-vue';
 						<li>
 							<el-row>
 								<el-col :span="8">
-									<img src="../assets/14670.jpg" alt="about us mission" />
+									<img src="../assets/project3.jpg" alt="about us mission" />
 								</el-col>
 								<el-col :span="15" :offset="1">
-									<h3>Our Mission</h3>
-									<p>Sed ut perspiciatis unde omnis	atis unde...	</p>
+									<h3>Mission</h3>
+									<p> perspiciatis unde omnis	atis unde...	</p>
 									<p><el-icon><Shop /></el-icon>check the mission</p>
 								</el-col>
 							</el-row>
@@ -100,9 +100,11 @@ import { Shop } from '@element-plus/icons-vue';
 			li {
 				text-align: left;
 				margin: 20px auto 30px;
+				height: 125px;
+				overflow: hidden;
 				img {
 					max-width: 100%;
-					height: auto;
+					max-height: 100%;
 				}
 				h3 {
 					font-size: 18px;

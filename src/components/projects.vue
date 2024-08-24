@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+const routerPush =  ()	=> {
+	debugger
+	router.push("/projectsList");
+};
+
 </script>
 
 
@@ -14,70 +22,70 @@ import { ref } from "vue";
 			</el-col>
 			<el-col :span="24">
 				<ul class="projects_list">
-					<li>
+					<li onclick={routerPush()}>
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/project1.jpg" alt="">
+									<img src="../assets/loop0.png" alt="">
 								</div>
 							</div>
-							<h3>Project Name 1</h3>
-							<p>Lorem ipsum dolor sit amet</p>
+							<h3>汽油便携式数码发电机</h3>
+							<p>Gasoline portable digital generator</p>
 						</div>
 					</li>
 					<li>
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/project2.jpg" alt="">
+									<img src="../assets/loop1.png" alt="">
 								</div>
 							</div>
-							<h3>Project Name 1</h3>
-							<p>Lorem ipsum dolor sit amet</p>
+							<h3>通用汽油发电机</h3>
+							<p>General purpose gasoline generator</p>
 						</div>
 					</li>
 					<li>
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/project3.jpg" alt="">
+									<img src="../assets/loop2.png" alt="">
 								</div>
 							</div>
-							<h3>Project Name 1</h3>
-							<p>Lorem ipsum dolor sit amet</p>
+							<h3>通用柴油发电机</h3>
+							<p>General purpose diesel generator</p>
 						</div>
 					</li>
 					<li>
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/project1.jpg" alt="">
+									<img src="../assets/loop3.png" alt="">
 								</div>
 							</div>
-							<h3>Project Name 1</h3>
-							<p>Lorem ipsum dolor sit amet</p>
+							<h3>无人机直流充电站</h3>
+							<p>DC charging station for UAV</p>
 						</div>
 					</li>
 					<li>
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/project2.jpg" alt="">
+									<img src="../assets/loop4.png" alt="">
 								</div>
 							</div>
-							<h3>Project Name 1</h3>
-							<p>Lorem ipsum dolor sit amet</p>
+							<h3>大型柴油电站</h3>
+							<p>Large-scale diesel power station</p>
 						</div>
 					</li>
 					<li>
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/project3.jpg" alt="">
+									<img src="../assets/loop5.png" alt="">
 								</div>
 							</div>
-							<h3>Project Name 1</h3>
-							<p>Lorem ipsum dolor sit amet</p>
+							<h3>汽油水泵</h3>
+							<p>Gasoline water pump</p>
 						</div>
 					</li>
 				</ul>
@@ -155,7 +163,7 @@ import { ref } from "vue";
 		align-items: center;
 		img {
 			width: 100%;
-			height: 100%;
+			height: 260px;
 			border-radius: 10px;
 			object-fit: cover;
 		}

@@ -7,14 +7,14 @@ import src from '/src/assets/homeBanner.jpg';
 <template>
 	<div class="home_placeholder">
 		<el-row>
-			<el-col :span="10">
+			<el-col :span="12">
 				<div class="description">
 					<h2>Create Amazing Landing Page With <el-text class="highlight" size="large" type="primary">科普勒</el-text></h2>
 					<h3>Nody is a Vue 3.x UI component library that provides a set of high-quality components for building web applications.</h3>
 					<p>Nody is designed for building landing pages, portfolios, and other types of websites. It provides a set of high-quality components that can be easily customized and integrated into your project.</p>
 				</div>
 			</el-col>
-			<el-col :span="12" :offset="2">
+			<el-col :span="11" :offset="1">
 				<div class="block">
 					<el-image :src="src">
 						<template #placeholder>

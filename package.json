@@ -10,9 +10,14 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
+    "@types/express": "^4.17.21",
     "axios": "^1.7.2",
+    "cors": "^2.8.5",
     "element-plus": "^2.7.6",
+    "express": "4.17.1",
+    "mysql": "^2.18.1",
     "normalize.css": "^8.0.1",
+    "ts-node": "^10.9.2",
     "vue": "^3.4.29",
     "vue-router": "4",
     "vuex": "^4.0.2"
