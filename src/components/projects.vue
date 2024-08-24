@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 
-const routerPush =  ()	=> {
-	debugger
-	router.push("/projectsList");
+const routerPush = (p0: number) => {
+	router.push("/projectList?id=" + p0);
 };
-
 </script>
 
 
@@ -17,71 +14,71 @@ const routerPush =  ()	=> {
 			<el-col :span="24">
 				<div class="description">
 					<h2>Our Latest Project</h2>
-					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 			</el-col>
 			<el-col :span="24">
 				<ul class="projects_list">
-					<li onclick={routerPush()}>
+					<li @click="routerPush(1)">
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop0.png" alt="">
+									<img src="../assets/loop0.png" alt />
 								</div>
 							</div>
 							<h3>汽油便携式数码发电机</h3>
 							<p>Gasoline portable digital generator</p>
 						</div>
 					</li>
-					<li>
+					<li  @click="routerPush(2)">
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop1.png" alt="">
+									<img src="../assets/loop1.png" alt />
 								</div>
 							</div>
 							<h3>通用汽油发电机</h3>
 							<p>General purpose gasoline generator</p>
 						</div>
 					</li>
-					<li>
+					<li  @click="routerPush(3)">
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop2.png" alt="">
+									<img src="../assets/loop2.png" alt />
 								</div>
 							</div>
 							<h3>通用柴油发电机</h3>
 							<p>General purpose diesel generator</p>
 						</div>
 					</li>
-					<li>
+					<li  @click="routerPush(4)">
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop3.png" alt="">
+									<img src="../assets/loop3.png" alt />
 								</div>
 							</div>
 							<h3>无人机直流充电站</h3>
 							<p>DC charging station for UAV</p>
 						</div>
 					</li>
-					<li>
+					<li  @click="routerPush(5)">
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop4.png" alt="">
+									<img src="../assets/loop4.png" alt />
 								</div>
 							</div>
 							<h3>大型柴油电站</h3>
 							<p>Large-scale diesel power station</p>
 						</div>
 					</li>
-					<li>
+					<li  @click="routerPush(6)">
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop5.png" alt="">
+									<img src="../assets/loop5.png" alt />
 								</div>
 							</div>
 							<h3>汽油水泵</h3>
@@ -170,10 +167,9 @@ const routerPush =  ()	=> {
 	}
 }
 
-
-.projects_list li h3 {	
+.projects_list li h3 {
 	font-size: 24px;
 	color: #333;
 	margin-bottom: 10px;
-}	
+}
 </style>
