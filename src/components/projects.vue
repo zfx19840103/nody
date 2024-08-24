@@ -23,7 +23,7 @@ const routerPush = (p0: number) => {
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop0.png" alt />
+									<img src="../assets/loop0.png"  />
 								</div>
 							</div>
 							<h3>汽油便携式数码发电机</h3>
@@ -34,7 +34,7 @@ const routerPush = (p0: number) => {
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop1.png" alt />
+									<img src="../assets/loop1.png"  />
 								</div>
 							</div>
 							<h3>通用汽油发电机</h3>
@@ -45,7 +45,7 @@ const routerPush = (p0: number) => {
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop2.png" alt />
+									<img src="../assets/loop2.png"  />
 								</div>
 							</div>
 							<h3>通用柴油发电机</h3>
@@ -56,7 +56,7 @@ const routerPush = (p0: number) => {
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop3.png" alt />
+									<img src="../assets/loop3.png"  />
 								</div>
 							</div>
 							<h3>无人机直流充电站</h3>
@@ -67,7 +67,7 @@ const routerPush = (p0: number) => {
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop4.png" alt />
+									<img src="../assets/loop4.png"  />
 								</div>
 							</div>
 							<h3>大型柴油电站</h3>
@@ -78,7 +78,7 @@ const routerPush = (p0: number) => {
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop5.png" alt />
+									<img src="../assets/loop5.png"  />
 								</div>
 							</div>
 							<h3>汽油水泵</h3>

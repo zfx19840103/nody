@@ -16,7 +16,7 @@ const handleSelect = (index: string) => {
 					<img src="../../src/assets/logo.png" alt="NODY" />
 				</h1>
 				<el-menu
-					:default-active="activeIndex"
+					:default-active="props.activeIndex"
 					class="header-menu"
 					mode="horizontal"
 					@select="handleSelect"

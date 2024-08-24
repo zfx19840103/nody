@@ -10,10 +10,7 @@ import src3 from "/src/assets/loop2.png";
 import src4 from "/src/assets/loop3.png";
 import src5 from "/src/assets/loop5.png";
 const activeIndex = ref("projects");
-const components = {
-	Header,
-	Footer,
-};
+
 const changeActiveIndex = (index: string) => {
 	activeIndex.value = index;
 	router.push('/index#' + index);

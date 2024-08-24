@@ -9,21 +9,7 @@ import ContactUs from "./contact-us.vue";
 import Header from "./header.vue";
 import Footer from "./footer.vue";
 
-import { useRouter } from "vue-router";
-const router = useRouter();
 const activeIndex = ref("home");
-
-const components = {
-	Home,
-	Products,
-	Services,
-	Projects,
-	AboutUs,
-	ContactUs,
-	Header,
-	Footer,
-};
-
 
 </script>
 
