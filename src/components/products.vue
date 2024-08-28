@@ -65,7 +65,7 @@ const data = [
 <style scoped>
 .products {
 	padding-top: 80px;
-	margin: -50px 0 80px;
+	margin: 0;
 	width: 100%;
 	height: 600px;
 }

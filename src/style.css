@@ -59,10 +59,8 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
-  min-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 1rem 0;
   text-align: center;
 }
 
@@ -77,4 +75,8 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.el-affix--fixed {
+  background-color: #000;
+  border-bottom: #000 solid 1px;
 }

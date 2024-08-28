@@ -52,10 +52,9 @@ import { ref } from "vue";
 
 <style scoped lang="scss">
 .services_placeholder {
-	background-color: #f9f9f9;
 	overflow: hidden;
 	min-height: 500px;
-	padding: 30px 0 0;
+	margin: 30px 0 0;
 }
 
 .description {

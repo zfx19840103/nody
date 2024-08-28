@@ -93,7 +93,6 @@ const routerPush = (p0: number) => {
 
 <style scoped lang="scss">
 .projects_placeholder {
-	background-color: #f9f9f9;
 	overflow: hidden;
 	min-height: 500px;
 	padding-top: 30px;

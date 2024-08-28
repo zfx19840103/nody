@@ -15,10 +15,10 @@ const activeIndex = ref("home");
 
 <template>
 	<div class="common-layout">
+		<Header :active-index="activeIndex" />
+		<Home id="home" />
 		<el-container>
-			<Header :active-index="activeIndex" />
 			<el-main>
-				<Home id="home" />
 				<Products id="products" />
 				<Services id="services" />
 				<Projects id="projects" />
@@ -34,6 +34,11 @@ const activeIndex = ref("home");
 
 <style scoped lang="scss">
 .el-main {
-	padding: 0 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+}
+.common-layout {
+	width: 100%;
 }
 </style>
