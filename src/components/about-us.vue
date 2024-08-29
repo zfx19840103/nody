@@ -75,19 +75,19 @@ import { Shop } from '@element-plus/icons-vue';
 <style scoped lang="scss">
 .about_placeholder {
 	padding: 60px 0 0;
-	background-color: #f5f5f5;
 	min-height: 500px;
 	.description {
-		text-align: center;
+		text-align: left;
 		h2 {
-			font-size: 24px;
+			font-size: 36px;
 			margin-bottom: 10px;
+			color: #000;
 		}
 		p {
-			width: 60%;
-			font-size: 16px;
-			text-align: center;
-			margin: 0 auto 20px;
+			width: 80%;
+			font-size: 22px;
+			text-align: left;
+			margin-bottom: 20px;
 		}
 	}
 	.block {

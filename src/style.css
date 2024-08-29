@@ -28,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-size: medium;
 }
 
 h1 {
@@ -79,4 +80,7 @@ button:focus-visible {
 .el-affix--fixed {
   background-color: #000;
   border-bottom: #000 solid 1px;
+}
+footer.el-footer {
+	padding: 0;
 }

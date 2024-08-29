@@ -78,16 +78,16 @@ const submitForm = () => {
 }
 
 .description h2 {
-	font-size: 28px;
-	color: #333;
+	font-size: 36px;
+	color: #000;
 	margin-bottom: 20px;
 }
 
 .description p {
-	width: 60%;
+	width: 80%;
 	margin: 0 auto;
-	font-size: 18px;
-	color: #666;
+	font-size: 22px;
+	color: #333;
 	margin-bottom: 40px;
 }
 

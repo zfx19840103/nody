@@ -20,15 +20,16 @@
 <style scoped lang="scss">
 .footer-content {
 	background-color: #292d32;
-	padding: 20px;
+	padding: 30px 0 80px;
 	text-align: center;
 	p {
 		color: #fff;
-		margin: 20px auto;
+		font-size: 20px;
+		margin: 30px auto;
 	}
 	a {
 		color: #fff;
-		margin-right: 20px;
+		margin-right: 50px;
 		&:hover {
 			color: #f5f5f5;
 		}
@@ -37,5 +38,6 @@
 		}
 	}
 }
+
 </style>
 
