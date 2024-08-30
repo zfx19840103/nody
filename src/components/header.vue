@@ -14,7 +14,7 @@ const handleSelect = (index: string) => {
 		<el-affix :offset="0" class="affix-header">
 			<div class="container">
 				<h1 class="logo" @click="$router.push('/')">
-					<img src="../../src/assets/logo.png" alt="NODY" />
+					<img src="../../src/assets/logo-white.png" alt="NODY" />
 				</h1>
 				<el-menu
 					:default-active="props.activeIndex"
