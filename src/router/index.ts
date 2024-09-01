@@ -16,7 +16,19 @@ const routes: Array<RouteRecordRaw> = [
     name: "projectList",
     component: () => import('../components/projectList.vue'),
     meta: { title: 'projectList' }
-  }
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import('../components/login.vue'),
+    meta: { title: 'login' }
+  },
+  {
+    path: "/manage",
+    name: "manage",
+    component: () => import('../components/manage.vue'),
+    meta: { title:'manage' }
+  },
 ];
 const router = createRouter({
       history,

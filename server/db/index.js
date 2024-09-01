@@ -1,14 +1,9 @@
-import mysql from 'mysql';
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '123456',
-  database : 'test'
-});
+import { createPool } from 'mysql'
+let db = createPool({
+  host: 'localhost', //数据库IP地址
+  user: 'root', //数据库登录账号，
+  password: '123456', //数据库登录密码
+  database: 'nody', //要操作的数据库
+})
  
-connection.connect();
- 
-connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-  if (error) throw error;
-  console.log('The solution is: ', results[0].solution);
-});
+export default db

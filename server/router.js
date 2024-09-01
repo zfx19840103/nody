@@ -1,7 +1,8 @@
-let express = require('express')
-let router = express.Router()
-let user = require('./API/user')
-
-router.get('/user', user.get)
-
-module.exports = router
+import express from 'express'
+ 
+import { userGet } from './API/user.js'
+ 
+const router = express.Router()
+router.get('/user', userGet)
+ 
+export default router
