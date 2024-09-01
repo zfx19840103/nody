@@ -2,7 +2,6 @@
 import { reactive, ref } from 'vue'
 import type { FormInstance } from 'element-plus'
 import { loginApi } from '../api/login'
-import { debug } from 'console';
 
 const formRef = ref<FormInstance>()
 
