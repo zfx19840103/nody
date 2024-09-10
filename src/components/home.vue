@@ -1,7 +1,37 @@
-<script setup lang="ts">
+<script setup lang="ts" type="module">
 import { ref } from "vue";
-import src from '/src/assets/homeBanner.jpg';
+import homeBannerImg from "/src/assets/homeBanner.jpg";
+// import { home } from "../api/content";
 
+let content = ref({
+	text_large: "",
+	text_font: "",
+	text_h2: "",
+	text_p: "WHAT WE DO?",
+	home_banner: homeBannerImg
+});
+
+// const getArticles = () => {
+// 	home()
+// 		.then((res: any) => {
+// 			if (res.code === 0) {
+// 				content.value = res.data;
+// 			} else {
+// 				console.log("failed");
+// 			}
+// 		})
+// 		.catch((err: any) => {
+// 			console.log(err);
+// 		});
+// };
+// getArticles();
+
+// const contentTextpFunc = (value: string) => {
+// 	if (!!value && value.includes("/n")) {
+// 		value = value.replace("/n", "<br><br>");
+// 	}
+// 	return value;
+// };
 </script>
 
 <template>
@@ -9,14 +39,29 @@ import src from '/src/assets/homeBanner.jpg';
 		<el-row>
 			<el-col :span="11" :offset="1">
 				<div class="description">
-					<h2>Create Amazing Landing Page With <el-text class="highlight" size="large" type="primary">科普勒</el-text></h2>
-					<h3>Nody is a Vue 3.x UI component library that provides a set of high-quality components for building web applications.</h3>
-					<p>Nody is designed for building landing pages, portfolios, and other types of websites. It provides a set of high-quality components that can be easily customized and integrated into your project.</p>
+					<h2>
+						Create Amazing Landing Page With
+						<el-text class="highlight" size="large" type="primary">科普勒</el-text>
+					</h2>
+					<h3>BEIJING KPL COMPANY PROFILE COMPANY PROFILE TECHNOLOGY CO., LTD</h3>
+					<h4>WHAT WE DO?</h4>
+					<p>SCOPE OF PRODUCT SPECIALIZATION</p>
+					<p>
+						<strong>EXCAVATORS</strong>
+						<strong>LOADERS</strong>
+						<strong>GRADERS</strong>
+						<strong>FOKLIFTS</strong>
+						<strong>GENERATOR SETS</strong>
+						<strong>ENERGY STORAGE SYSTEMS</strong>
+						<strong>AGRICULTURAL EQUIPMENTS</strong>
+						<strong>WELDING MACHINES</strong>
+						<strong>WATER PUMPS</strong>
+					</p>
 				</div>
 			</el-col>
 			<el-col :span="10" :offset="1">
 				<div class="block">
-					<el-image :src="src">
+					<el-image :src="content.home_banner">
 						<template #placeholder>
 							<div class="image-slot">
 								Loading
@@ -36,12 +81,15 @@ import src from '/src/assets/homeBanner.jpg';
 	padding-top: 30px;
 }
 .home_placeholder .block {
-	padding: 50px 0 30px;
+	margin-top: 50px;
 	text-align: right;
 	display: inline-block;
 	width: 100%;
 	box-sizing: border-box;
 	vertical-align: top;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	overflow: hidden;
 }
 .home_placeholder .description {
 	padding: 50px 0 0;
@@ -51,7 +99,7 @@ import src from '/src/assets/homeBanner.jpg';
 	width: 100%;
 	box-sizing: border-box;
 	h2 {
-		padding: 20px 0 0;
+		padding: 10px 0 0;
 		color: #333333;
 		font-size: 44px;
 		text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.15);
@@ -65,16 +113,34 @@ import src from '/src/assets/homeBanner.jpg';
 		font-size: 24px;
 		margin-top: 10px;
 	}
+	h4 {
+		color: #9b9bae !important;
+		font-size: 21px;
+		margin: 0;
+		font-weight: 700;
+	}
 	p {
 		font-size: 18px;
 		margin-top: 10px;
+		word-break: break-all;
+		strong {
+			font-weight: 500;
+			margin-right: 20px;
+		}
 	}
 }
 .home_placeholder .el-image {
-	// max-width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
 	max-height: 550px;
+	transition: all 0.3s ease;
+	
 }
-
+.home_placeholder .el-image:hover {
+	transform: scale(1.05);
+}
 .home_placeholder.image-slot {
 	display: flex;
 	justify-content: center;

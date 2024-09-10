@@ -19,8 +19,8 @@ const activeIndex = ref("home");
 		<Home id="home" />
 		<el-container>
 			<el-main>
-				<Products id="products" />
 				<Services id="services" />
+				<Products id="products" />
 				<Projects id="projects" />
 				<AboutUs id="aboutUs" />
 				<ContactUs id="contactUs" />

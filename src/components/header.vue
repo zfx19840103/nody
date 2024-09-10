@@ -13,8 +13,8 @@ const handleSelect = (index: string) => {
 	<el-header>
 		<el-affix :offset="0" class="affix-header">
 			<div class="container">
-				<h1 class="logo" @click="$router.push('/')">
-					<img src="../../src/assets/logo-white.png" alt="NODY" />
+				<h1 class="logo" @click="$router.push('/')" title="KEPULE">
+					<img src="../../src/assets/logo-white.png" alt="logo" />
 				</h1>
 				<el-menu
 					:default-active="props.activeIndex"
@@ -25,11 +25,11 @@ const handleSelect = (index: string) => {
 					<el-menu-item index="home">
 						<a href="#home">Home</a>
 					</el-menu-item>
-					<el-menu-item index="products">
-						<a href="#products">Products</a>
-					</el-menu-item>
 					<el-menu-item index="services">
 						<a href="#services">Services</a>
+					</el-menu-item>
+					<el-menu-item index="products">
+						<a href="#products">Products</a>
 					</el-menu-item>
 					<el-menu-item index="projects">
 						<a href="#projects">Projects</a>

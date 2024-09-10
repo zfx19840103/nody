@@ -1,8 +1,10 @@
 import express from 'express'
  
-import { userGet } from './API/user.js'
+import {users_kepule, home_kepule } from './API/user.js'
  
 const router = express.Router()
-router.get('/user', userGet)
+
+router.get('/home', home_kepule)
+router.post('/login', users_kepule)
  
 export default router

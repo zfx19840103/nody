@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { reactive } from 'vue'
 
 // do not use same name with ref
-const form = reactive({
+const form = ref({
   firstname: '',
   lastname: '',
   email: '',
@@ -21,16 +20,16 @@ const submitForm = () => {
 			<el-col :span="24">
 				<div class="description">
 					<h2>Contact Us</h2>
-					<p>Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam nisi commodi consequatur</p>
+					<p>If you have any needs, please contact us promptly. Our one-stop service team will provide you with the best service</p>
 				</div>
 			</el-col>
 			<el-col :span="13">
 				<div class="contact-info">
 					<img src="../assets/contact-img.png" alt="contact-us">
 					<h3>Send Us a Message</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Please contact us and send us your email</p>
 					<el-button type="primary" size="large">start live chat</el-button>
-					<p>Email: <span>You can also call us at +1 (123) 456-7890</span>	</p>
+					<p>Email: <span>bjkpl@bjkpl.cn</span>	</p>
 				</div>
 			</el-col>
 			<el-col :span="8" :offset="2">

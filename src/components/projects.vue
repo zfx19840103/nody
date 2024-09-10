@@ -7,14 +7,13 @@ const routerPush = (p0: number) => {
 };
 </script>
 
-
 <template>
 	<div class="projects_placeholder">
 		<el-row>
 			<el-col :span="24">
 				<div class="description">
 					<h2>Our Latest Project</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Our product can be used in various industries, such as NEW ENERGY、PACKAGING PROCESSING、CONSTRUCTION、HVAC、MECHANICAL ENGINEERING、GENERAL MACHINERY，and more</p>
 				</div>
 			</el-col>
 			<el-col :span="24">
@@ -146,6 +145,11 @@ const routerPush = (p0: number) => {
 			margin: 0 auto;
 		}
 	}
+	.libg:hover {
+		h3, p {
+			color: rgba(0, 118, 245, 1);
+		}
+	}
 }
 
 .projects_list li .icon {
@@ -153,16 +157,20 @@ const routerPush = (p0: number) => {
 	margin: 0 auto;
 	.icon-bg {
 		width: 100%;
-		height: 100%;
+		height: 260px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		border-radius: 10px;
+		overflow: hidden;
 		img {
 			width: 100%;
-			height: 260px;
-			border-radius: 10px;
-			object-fit: cover;
+			height: 100%;
+			transition: all 0.3s ease;
 		}
+	}
+	.icon-bg:hover img {
+		transform: scale(1.1);
 	}
 }
 

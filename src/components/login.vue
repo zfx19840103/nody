@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import type { FormInstance } from 'element-plus'
-import { loginApi } from '../api/login'
+import { login } from '../api/login'
+import router from '../router'
 
 const formRef = ref<FormInstance>()
 
@@ -15,8 +16,14 @@ const submitForm = (formEl: FormInstance | undefined) => {
   formEl.validate((valid) => {
 
     if (valid) {
-			loginApi(ruleForm).then((res: any) => {
-				console.log(res)
+			login(ruleForm).then((res: any) => {
+				if (res.code === 0) {
+					let token = res.data.token
+					token && localStorage.setItem('token', token)
+					router.push('/admin')
+				} else {
+					console.log('failed')
+				}
 			}).catch((err: any) => {
 				console.log(err)
 			})
@@ -71,7 +78,7 @@ const resetForm = (formEl: FormInstance | undefined) => {
 
 <style scoped lang="scss">
 .demo-ruleForm {
-  margin: 0 auto;
+	margin: 0 auto;
 	.el-form-item {
 		margin-bottom: 20px;
 	}

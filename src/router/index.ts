@@ -29,6 +29,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../components/manage.vue'),
     meta: { title:'manage' }
   },
+  {
+    path: "/admin",
+    name: "admin",
+    component: () => import('../components/admin.vue'),
+    meta: { title:'admin' }
+  },
 ];
 const router = createRouter({
       history,

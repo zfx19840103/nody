@@ -65,7 +65,7 @@ button:focus-visible {
   text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: dark) { */
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -76,11 +76,15 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+/* } */
 .el-affix--fixed {
   background-color: #000;
   border-bottom: #000 solid 1px;
 }
 footer.el-footer {
 	padding: 0;
+}
+
+.header-menu li.el-menu-item:hover a, .header-menu li.el-menu-item:focus a {
+  color: var(--el-color-primary);
 }

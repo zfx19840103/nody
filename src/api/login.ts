@@ -1,7 +1,8 @@
 import request from '../utils/request'
-export function loginApi (params: any) {
+const API_PREFIX = 'http://localhost:3000';
+export const login = (params: any) => {
   return request({
-    url: 'http://192.168.0.100/user',
+    url: API_PREFIX + '/login',
     method: 'post',
     data: params,
   });

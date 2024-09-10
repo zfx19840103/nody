@@ -66,8 +66,9 @@ const data = [
 .products {
 	padding-top: 80px;
 	margin: 0;
-	width: 100%;
+	max-width: 1200px;
 	height: 600px;
+	margin: 0 auto;
 }
 .el-carousel__item h3 {
 	color: #475669;
