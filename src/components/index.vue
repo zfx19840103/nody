@@ -4,24 +4,26 @@ import Home from "./home.vue";
 import Products from "./products.vue";
 import Services from "./services.vue";
 import Projects from "./projects.vue";
+import OtherProducts from "./OtherProducts.vue";
 import AboutUs from "./about-us.vue";
 import ContactUs from "./contact-us.vue";
 import Header from "./header.vue";
 import Footer from "./footer.vue";
 
-const activeIndex = ref("home");
+const activeIndex = ref("Home");
 
 </script>
 
 <template>
 	<div class="common-layout">
 		<Header :active-index="activeIndex" />
-		<Home id="home" />
+		<Home id="Home" />
+		<Products id="Generators" />
 		<el-container>
 			<el-main>
+				<Projects />
+				<OtherProducts id="OtherProducts" />
 				<Services id="services" />
-				<Products id="products" />
-				<Projects id="projects" />
 				<AboutUs id="aboutUs" />
 				<ContactUs id="contactUs" />
 			</el-main>

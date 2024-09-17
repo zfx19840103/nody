@@ -27,7 +27,7 @@ import { ref } from "vue";
 					<li>
 						<div class="icon icon-1">
 							<div class="icon-bg">
-								<img src="../../src/assets/icon-1.png" alt="" />
+								<img src="../../src/assets/icon-11.png" alt="" />
 							</div>
 						</div>
 						<h3>MACHINERY</h3>
@@ -45,7 +45,7 @@ import { ref } from "vue";
 					<li>
 						<div class="icon icon-2">
 							<div class="icon-bg">
-								<img src="../../src/assets/icon-2.png" alt="" />
+								<img src="../../src/assets/icon-12.png" alt="" />
 							</div>
 						</div>
 						<h3>
@@ -63,7 +63,7 @@ import { ref } from "vue";
 					<li>
 						<div class="icon icon-3">
 							<div class="icon-bg">
-								<img src="../../src/assets/icon-3.png" alt="" />
+								<img src="../../src/assets/icon-13.png" alt="" />
 							</div>
 						</div>
 						<h3>SPARE PARTS</h3>
@@ -155,8 +155,8 @@ import { ref } from "vue";
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		-webkit-filter: brightness(0.55);
-		filter: brightness(0.55);
+		-webkit-filter: brightness(0.25);
+		filter: brightness(0.25);
 		-webkit-transition: all 0.5s;
 		img {
 			width: 50%;
@@ -181,11 +181,14 @@ import { ref } from "vue";
 	p {
 		font-size: 18px;
 		line-height: 24px;
-		display: -webkit-box;
-		-webkit-line-clamp: 4;
+		-webkit-line-clamp: 6;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		height: 144px;
+		display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
 	}
 	.btn:hover {
 		cursor: pointer;

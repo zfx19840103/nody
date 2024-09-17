@@ -6,3 +6,11 @@ export const home = () => {
     method: 'get',
   });
 }
+
+export const contact = (params: any) => {
+  return request({
+    url: API_PREFIX + '/contact',
+    method: 'post',
+    data: params,
+  });
+}

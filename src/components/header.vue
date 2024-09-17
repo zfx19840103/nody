@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, defineEmits } from "vue";
+import { defineProps, defineEmits, computed, ref } from "vue";
 
 const props = defineProps(["activeIndex"]);
 const emit = defineEmits(["childEvent"]);
@@ -12,50 +12,30 @@ const handleSelect = (index: string) => {
 <template>
 	<el-header>
 		<el-affix :offset="0" class="affix-header">
-			<div class="container">
+			<el-anchor :offset="60" direction="horizontal">
 				<h1 class="logo" @click="$router.push('/')" title="KEPULE">
 					<img src="../../src/assets/logo-white.png" alt="logo" />
 				</h1>
-				<el-menu
-					:default-active="props.activeIndex"
-					class="header-menu"
-					mode="horizontal"
-					@select="handleSelect"
-				>
-					<el-menu-item index="home">
-						<a href="#home">Home</a>
-					</el-menu-item>
-					<el-menu-item index="services">
-						<a href="#services">Services</a>
-					</el-menu-item>
-					<el-menu-item index="products">
-						<a href="#products">Products</a>
-					</el-menu-item>
-					<el-menu-item index="projects">
-						<a href="#projects">Projects</a>
-					</el-menu-item>
-					<el-menu-item index="aboutUs">
-						<a href="#aboutUs">About Us</a>
-					</el-menu-item>
-					<el-menu-item index="contactUs">
-						<a href="#contactUs">Contact Us</a>
-					</el-menu-item>
-				</el-menu>
-			</div>
+				<el-anchor-link href="#Home">Home</el-anchor-link>
+				<el-anchor-link href="#Generators">Generators</el-anchor-link>
+				<el-anchor-link href="#OtherProducts">OtherProducts</el-anchor-link>
+				<el-anchor-link href="#services">services</el-anchor-link>
+				<el-anchor-link href="#aboutUs">aboutUs</el-anchor-link>
+				<el-anchor-link href="#contactUs">contactUs</el-anchor-link>
+			</el-anchor>
 		</el-affix>
 	</el-header>
 </template>
 
 <style scoped lang="scss">
 .logo {
+	float: left;
 	font-size: 36px;
 	font-weight: bold;
 	color: #333;
-	margin: 0;
-	padding: 0 30px 0 0;
-	line-height: 60px;
-	float: left;
-	height: 60px;
+	margin: 6px 0 0;
+	width: 300px;
+	height: 54px;
 	display: block;
 	text-decoration: none;
 	background-color: #000;
@@ -64,29 +44,26 @@ const handleSelect = (index: string) => {
 		width: auto;
 	}
 }
-.el-menu--horizontal.el-menu {
-	border-bottom-width: 0;
-}
-.header-menu {
-	border-bottom-width: 0;
-	background-color: #000;
-	a {
-		font-size: 20px;
-		color: #fff;
-		padding: 0 10px;
-		font-weight: bold;
-	}
-}
 .el-header {
 	background-color: #000;
 	text-align: center;
 	padding: 0;
 	.container {
-			max-width: 1280px;
-			margin: 0 auto;
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+
+	.el-anchor.el-anchor--horizontal .el-anchor__list .el-anchor__item {
+		padding: 0 36px 0 0;
 	}
 }
-.el-menu--horizontal>.el-menu-item.is-active {
-	border-bottom: #fff solid 2px;
+
+.el-anchor {
+	--el-anchor-bg-color: #000;
+	--el-anchor-line-height: 52px;
+	--el-anchor-font-size: 24px;
+	--el-anchor-color: #fff;
+	--el-anchor-active-color: var(--el-color-primary);
+	--el-anchor-marker-bg-color: #fff;
 }
 </style>

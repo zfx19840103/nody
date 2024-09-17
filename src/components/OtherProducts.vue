@@ -1,86 +1,86 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 const router = useRouter();
-
-const routerPush = (p0: number) => {
-	router.push(`/projectList?id=${p0}#Generators`);
-};
 </script>
 
 <template>
-	<div class="projects_placeholder">
+	<div class="otherProducts_placeholder">
 		<el-row>
 			<el-col :span="24">
 				<div class="description">
-					<h2>Our Latest Project</h2>
-					<p>Our generator can be used in construction, construction, mining, oil fields, medical equipment, data centers, municipal facilities, vehicle modifications, recreational vehicles, agricultural production, spare lighting, etc.</p>
+					<h2>other Products</h2>
+					<p>
+						We offer seamless docking
+						services to ensure smooth
+						project execution. Additionally,
+						we provide optional logistics
+						and warehousing solutions to
+						enhance cargo turnover
+						efficiency and reduce
+						operational costs for our
+						customers.
+					</p>
 				</div>
 			</el-col>
 			<el-col :span="24">
-				<ul class="projects_list">
-					<li @click="routerPush(1)">
+				<ul class="otherProducts_list">
+					<li>
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop1.png"  />
+									<img src="../assets/2-31.jpg" />
 								</div>
 							</div>
-							<!-- <h3>汽油便携式数码发电机</h3> -->
 							<p>Gasoline portable digital generator</p>
 						</div>
 					</li>
-					<li  @click="routerPush(2)">
+					<li>
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop0.png"  />
+									<img src="../assets/2-32.jpg" />
 								</div>
 							</div>
-							<!-- <h3>通用汽油发电机</h3> -->
 							<p>General purpose gasoline generator</p>
 						</div>
 					</li>
-					<li  @click="routerPush(3)">
+					<li>
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop5.png"  />
+									<img src="../assets/2-33.jpg" />
 								</div>
 							</div>
-							<!-- <h3>通用柴油发电机</h3> -->
-							<p>Smart Digital Inverter Generator</p>
+							<p>General purpose diesel generator</p>
 						</div>
 					</li>
-					<li  @click="routerPush(4)">
+					<li>
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop4.png"  />
+									<img src="../assets/2-34.jpg" />
 								</div>
 							</div>
-							<!-- <h3>无人机直流充电站</h3> -->
 							<p>DC charging station for UAV</p>
 						</div>
 					</li>
-					<li  @click="routerPush(5)">
+					<li>
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop3.png"  />
+									<img src="../assets/2-35.jpg" />
 								</div>
 							</div>
-							<!-- <h3>大型柴油电站</h3> -->
 							<p>Large-scale diesel power station</p>
 						</div>
 					</li>
-					<li  @click="routerPush(6)">
+					<li>
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
-									<img src="../assets/loop2.png"  />
+									<img src="../assets/2-36.jpg" />
 								</div>
 							</div>
-							<!-- <h3>汽油水泵</h3> -->
 							<p>Gasoline water pump</p>
 						</div>
 					</li>
@@ -91,7 +91,7 @@ const routerPush = (p0: number) => {
 </template>
 
 <style scoped lang="scss">
-.projects_placeholder {
+.otherProducts_placeholder {
 	overflow: hidden;
 	min-height: 500px;
 }
@@ -114,7 +114,7 @@ const routerPush = (p0: number) => {
 	margin-bottom: 40px;
 }
 
-.projects_list {
+.otherProducts_list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: left;
@@ -122,13 +122,14 @@ const routerPush = (p0: number) => {
 	padding: 0;
 }
 
-.projects_list li {
+.otherProducts_list li {
 	width: 30%;
 	margin: 20px auto;
 	list-style: none;
 	background-color: #fff;
-	height: 350px;
+	height: 360px;
 	.libg {
+		position: relative;
 		border-radius: 10px;
 		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 		text-align: center;
@@ -138,33 +139,47 @@ const routerPush = (p0: number) => {
 			margin: 10px auto 0;
 		}
 		p {
+			position: absolute;
+			bottom: 0;
+			left: 0;
 			font-size: 22px;
 			color: #000;
 			font-weight: 500;
 			line-height: 24px;
 			margin: 20px auto 0;
-			width: 90%;
+			width: 100%;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center; /* 垂直居中 */
+			justify-content: center; /* 水平居中 */
+			height: 64px;
+			opacity: 0.7;
+			padding: 0 20px;
+			z-index: 1;
+			background-color: #f3f3f3;
 		}
 	}
 	.libg:hover {
-		h3, p {
+		h3,
+		p {
 			color: rgba(0, 118, 245, 1);
 		}
 	}
 }
 
-.projects_list li .icon {
+.otherProducts_list li .icon {
 	width: 100%;
 	margin: 0 auto;
 	.icon-bg {
 		width: 100%;
-		height: 260px;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-radius: 10px 10px 0 0;
+		border-radius: 10px;
 		overflow: hidden;
 		img {
+			max-width: 100%;
 			max-height: 100%;
 			transition: all 0.3s ease;
 		}
@@ -174,7 +189,7 @@ const routerPush = (p0: number) => {
 	}
 }
 
-.projects_list li h3 {
+.otherProducts_list li h3 {
 	font-size: 24px;
 	color: #333;
 	margin-bottom: 10px;

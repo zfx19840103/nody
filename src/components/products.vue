@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import src1 from "/src/assets/14670.jpg";
-import src2 from "/src/assets/loop1.png";
-import src3 from "/src/assets/loop2.png";
-import src4 from "/src/assets/loop3.png";
-import src5 from "/src/assets/loop5.png";
+import src1 from "/src/assets/product_loop1.jpg";
+import src2 from "/src/assets/product_loop2.jpg";
+import src3 from "/src/assets/product_loop3.jpg";
+import src4 from "/src/assets/product_loop4.jpg";
+import src5 from "/src/assets/product_loop5.jpg";
+
 //引入工具类
 // import pubUse from '../utils/pubUse.ts';
 
@@ -64,11 +65,12 @@ const data = [
   
 <style scoped>
 .products {
-	padding-top: 80px;
-	margin: 0;
+	margin: 80px auto 0;
 	max-width: 1200px;
 	height: 600px;
-	margin: 0 auto;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
 }
 .el-carousel__item h3 {
 	color: #475669;
@@ -87,7 +89,7 @@ const data = [
 }
 .carousel-img {
 	width: 100%;
-	max-height: 100%;
+	height: 100%;
 	object-fit: cover;
 	margin: auto;
 }

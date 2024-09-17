@@ -60,12 +60,14 @@ export function users_kepule(req, res) {
 }
 
 export function contact_kepule(req, res) {
-  const { name, email, message } = req.body;
-  const sql = "INSERT INTO contact_kepule (name, email, message) VALUES (?,?,?)";
-  const params = [name, email, message];
+  const { firstname, lastname, email, message } = req.body;
+  const sql = "INSERT INTO contact_kepule(id, firstname, lastname, email, message) VALUES ?";
+  const params = [firstname, lastname, email, message];
+  console.log(params);
   db.query(sql, params, (err, results) => {
     if (err) {
       return res.status(500).send("数据库错误：" + err);
     }
     return res.status(200).send("提交成功");
+  });
 }
