@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useRouter } from "vue-router";
-const router = useRouter();
 </script>
 
 <template>
@@ -101,36 +99,36 @@ const router = useRouter();
 }
 
 .description h2 {
-	font-size: 36px;
+	font-size: 32px;
 	color: #000;
-	margin-bottom: 20px;
+	background: #fc0;
 }
 
 .description p {
 	width: 80%;
 	margin: 0 auto;
-	font-size: 22px;
-	color: #333;
+	font-size: 18px;
+	color: #fc0;
 	margin-bottom: 40px;
 }
 
 .otherProducts_list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: left;
+	justify-content: space-between;
 	margin: 0;
 	padding: 0;
 }
 
 .otherProducts_list li {
 	width: 30%;
-	margin: 20px auto;
+	margin: 40px 0 0;
 	list-style: none;
 	background-color: #fff;
-	height: 360px;
+
 	.libg {
 		position: relative;
-		border-radius: 10px;
+		border-radius: 5px;
 		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 		text-align: center;
 		box-sizing: border-box;
@@ -162,7 +160,7 @@ const router = useRouter();
 	.libg:hover {
 		h3,
 		p {
-			color: rgba(0, 118, 245, 1);
+			// color: rgba(0, 118, 245, 1);
 		}
 	}
 }

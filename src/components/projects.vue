@@ -12,7 +12,7 @@ const routerPush = (p0: number) => {
 		<el-row>
 			<el-col :span="24">
 				<div class="description">
-					<h2>Our Latest Project</h2>
+					<h2>Latest Products</h2>
 					<p>Our generator can be used in construction, construction, mining, oil fields, medical equipment, data centers, municipal facilities, vehicle modifications, recreational vehicles, agricultural production, spare lighting, etc.</p>
 				</div>
 			</el-col>
@@ -101,36 +101,37 @@ const routerPush = (p0: number) => {
 }
 
 .description h2 {
-	font-size: 36px;
-	color: #000;
+	font-size: 32px;
+	color: #fc0;
 	margin-bottom: 20px;
+	// background: #fff;
 }
 
 .description p {
 	width: 80%;
 	margin: 0 auto;
-	font-size: 22px;
-	color: #333;
+	font-size: 18px;
+	color: #fc0;
 	margin-bottom: 40px;
 }
 
 .projects_list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: left;
+	justify-content: space-between;
 	margin: 0;
 	padding: 0;
 }
 
 .projects_list li {
 	width: 30%;
-	margin: 20px auto;
+	margin: 40px 0 0;
 	list-style: none;
 	background-color: #fff;
-	height: 350px;
 	.libg {
-		border-radius: 10px;
-		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		position: relative;
+		border-radius: 10px 10px 0 0;
+		border: 1px solid #e8e8e8;
 		text-align: center;
 		box-sizing: border-box;
 		height: 100%;
@@ -141,14 +142,23 @@ const routerPush = (p0: number) => {
 			font-size: 22px;
 			color: #000;
 			font-weight: 500;
-			line-height: 24px;
-			margin: 20px auto 0;
-			width: 90%;
+			margin: 0 auto ;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 20px;
+			height: 90px;
+			line-height: 1.2;
+			background: #f5f5f5;
 		}
 	}
 	.libg:hover {
+
 		h3, p {
-			color: rgba(0, 118, 245, 1);
+			font-weight: 500;
+		}
+		p {
+			background: #fc0;
 		}
 	}
 }
@@ -158,20 +168,24 @@ const routerPush = (p0: number) => {
 	margin: 0 auto;
 	.icon-bg {
 		width: 100%;
-		height: 260px;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-radius: 10px 10px 0 0;
+		// border-radius: 10px 10px 0 0;
 		overflow: hidden;
 		img {
+			max-width: 100%;
 			max-height: 100%;
 			transition: all 0.3s ease;
 		}
 	}
-	.icon-bg:hover img {
-		transform: scale(1.1);
-	}
+	.icon-bg:hover {
+		img {
+			transform: scale(1.1);
+		}
+
+}
 }
 
 .projects_list li h3 {

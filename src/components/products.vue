@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import src1 from "/src/assets/product_loop1.jpg";
-import src2 from "/src/assets/product_loop2.jpg";
+import src1 from "/src/assets/product_loop3.jpg";
 import src3 from "/src/assets/product_loop3.jpg";
+import src2 from "/src/assets/product_loop1.jpg";
 import src4 from "/src/assets/product_loop4.jpg";
 import src5 from "/src/assets/product_loop5.jpg";
 
@@ -55,7 +55,7 @@ const data = [
 
 <template>
 	<div class="products">
-		<el-carousel :interval="5000" arrow="always" height="600px">
+		<el-carousel :interval="10000" arrow="always" height="calc(100vh - 70px)">
 			<el-carousel-item v-for="item in data" :key="item.id">
 				<img class="carousel-img" :src="item.src" />
 			</el-carousel-item>
@@ -65,17 +65,19 @@ const data = [
   
 <style scoped>
 .products {
-	margin: 80px auto 0;
-	max-width: 1200px;
-	height: 600px;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 100%;
+}
+.el-carousel {
+	max-width: 100%;
+	margin: 0 auto;
+	/* border-radius: 10px; */
 	overflow: hidden;
+	/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+	
 }
 .el-carousel__item h3 {
 	color: #475669;
 	opacity: 0.75;
-	line-height: 300px;
 	margin: 0;
 	text-align: center;
 }

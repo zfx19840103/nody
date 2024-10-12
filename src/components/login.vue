@@ -1,46 +1,60 @@
 <script lang="ts" setup>
-import { reactive, ref } from 'vue'
-import type { FormInstance } from 'element-plus'
-import { login } from '../api/login'
-import router from '../router'
+// import { reactive, ref } from 'vue'
+// import type { FormInstance } from 'element-plus'
+// import { login } from '../api/login'
+// import router from '../router'
 
-const formRef = ref<FormInstance>()
+// const formRef = ref<FormInstance>()
 
-const ruleForm = reactive({
-  username: '',
-  password: '',
-})
+// const ruleForm = reactive({
+//   username: '',
+//   password: '',
+// })
 
-const submitForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.validate((valid) => {
+// const submitForm = (formEl: FormInstance | undefined) => {
+//   if (!formEl) return
+//   formEl.validate((valid) => {
 
-    if (valid) {
-			login(ruleForm).then((res: any) => {
-				if (res.code === 0) {
-					let token = res.data.token
-					token && localStorage.setItem('token', token)
-					router.push('/admin')
-				} else {
-					console.log('failed')
-				}
-			}).catch((err: any) => {
-				console.log(err)
-			})
-    } else {
-      console.log('error submit!')
-    }
-  })
-}
+//     if (valid) {
+// 			login(ruleForm).then((res: any) => {
+// 				if (res.code === 0) {
+// 					let token = res.data.token
+// 					token && localStorage.setItem('token', token)
+// 					router.push('/admin')
+// 				} else {
+// 					console.log('failed')
+// 				}
+// 			}).catch((err: any) => {
+// 				console.log(err)
+// 			})
+//     } else {
+//       console.log('error submit!')
+//     }
+//   })
+// }
 
-const resetForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.resetFields()
+// const resetForm = (formEl: FormInstance | undefined) => {
+//   if (!formEl) return
+//   formEl.resetFields()
+// }
+// window.addEventListener('message', function(event) {
+// 	alert(event.origin === 'http://localhost:8008');
+//   if (event.origin === 'http://localhost:8008') {
+//     console.log('Received message from iframe:', event.data);
+//   }
+// }, false);
+
+const postMessageFunc = () => {
+	alert('postMessage')
+	parent.postMessage({"eventType":1}, 'http://localhost:8008');
 }
 </script>
 
 <template>
-	<el-form
+	<div>
+		<button @click="postMessageFunc()">postMessage</button>
+	</div>
+	<!-- <el-form
 		ref="formRef"
 		style="max-width: 600px"
 		:model="ruleForm"
@@ -73,7 +87,7 @@ const resetForm = (formEl: FormInstance | undefined) => {
 			<el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
 			<el-button @click="resetForm(formRef)">Reset</el-button>
 		</el-form-item>
-	</el-form>
+	</el-form> -->
 </template>
 
 <style scoped lang="scss">

@@ -89,3 +89,8 @@ footer.el-footer {
 .header-menu li.el-menu-item:hover a, .header-menu li.el-menu-item:focus a {
   color: var(--el-color-primary);
 }
+.el-anchor .el-anchor__list .el-anchor__item a.el-anchor__link {
+	display: block;
+  font-weight: 700;
+  font-size: 25px;
+}

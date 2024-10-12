@@ -19,7 +19,7 @@ export function home_kepule(req, res) {
           text_font: results[0].text_font,
           text_h2: results[0].text_h2,
           text_p: results[0].text_p,
-          home_banner: results[0].home_banner,
+          home_banner: results[0].home_banner
         },
         message: "登录成功"
       });
@@ -61,13 +61,16 @@ export function users_kepule(req, res) {
 
 export function contact_kepule(req, res) {
   const { firstname, lastname, email, message } = req.body;
-  const sql = "INSERT INTO contact_kepule(id, firstname, lastname, email, message) VALUES ?";
+  const sql = "INSERT INTO contact_kepule(id, firstname, lastname, email, message) VALUES('${firstname}','${lastname}',${email}, '${message}')";
   const params = [firstname, lastname, email, message];
   console.log(params);
   db.query(sql, params, (err, results) => {
     if (err) {
-      return res.status(500).send("数据库错误：" + err);
+      return res.status(500).send("database error: " + err);
     }
-    return res.status(200).send("提交成功");
+    return res.status(200).send({
+      code: 0,
+      message: "success"
+    });
   });
 }

@@ -10,22 +10,20 @@ import ContactUs from "./contact-us.vue";
 import Header from "./header.vue";
 import Footer from "./footer.vue";
 
-const activeIndex = ref("Home");
-
 </script>
 
 <template>
 	<div class="common-layout">
-		<Header :active-index="activeIndex" />
-		<Home id="Home" />
-		<Products id="Generators" />
+		<Header/>
+		<Products id="Home" />
+		<Home id="Generators" />
 		<el-container>
 			<el-main>
 				<Projects />
 				<OtherProducts id="OtherProducts" />
-				<Services id="services" />
-				<AboutUs id="aboutUs" />
-				<ContactUs id="contactUs" />
+				<Services id="Services" />
+				<AboutUs id="AboutUs" />
+				<ContactUs id="ContactUs" />
 			</el-main>
 			<el-footer>
 				<Footer />
@@ -36,11 +34,12 @@ const activeIndex = ref("Home");
 
 <style scoped lang="scss">
 .el-main {
-	max-width: 1200px;
+	max-width: 90%;
 	margin: 0 auto;
 	padding: 0;
 }
 .common-layout {
 	width: 100%;
+	background-color: #000;
 }
 </style>

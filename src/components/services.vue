@@ -1,4 +1,4 @@
-<script setup lang="ts">
+e8e8e8<script setup lang="ts">
 import { ref } from "vue";
 </script>
 
@@ -91,34 +91,32 @@ import { ref } from "vue";
 
 .description {
 	text-align: center;
-	margin-top: 80px;
 }
 
 .description h2 {
-	font-size: 36px;
-	font-weight: 700;
+	font-size: 32px;
 	color: #000;
-	margin: 0 0 20px;
+	background: #fc0;
 }
 
 .description p {
 	width: 80%;
-	font-size: 22px;
-	color: #000;
+	font-size: 18px;
+	color: #fc0;
 	margin: 0 auto 40px;
 }
 
 .services_list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 	margin: 0;
 	padding: 0;
 }
 
 .services_list li {
 	width: 30%;
-	margin: 20px auto;
+	margin: 20px 0;
 	list-style: none;
 	background-color: #fff;
 	border-radius: 10px;
@@ -129,15 +127,15 @@ import { ref } from "vue";
 }
 .services_list li:hover {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-	background: blue;
-	color: #fff;
+	background: #fc0;
+	// color: #fff;
 	h3 {
-		color: #fff;
+		// color: #fff;
 	}
 	.icon {
 		.icon-bg {
-			-webkit-filter: brightness(1);
-			filter: brightness(1);
+			// -webkit-filter: brightness(1);
+			// filter: brightness(1);
 		}
 	}
 }
@@ -189,6 +187,10 @@ import { ref } from "vue";
 		display: flex;
   align-items: center; /* 垂直居中 */
   justify-content: center; /* 水平居中 */
+	}
+	.btn {
+		display: inline-block;
+		font-weight: bold;
 	}
 	.btn:hover {
 		cursor: pointer;

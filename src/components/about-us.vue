@@ -92,20 +92,21 @@ const changeImg = (e: any) => {
 
 <style scoped lang="scss">
 .about_placeholder {
-	padding: 60px 0 0;
+	overflow: hidden;
 	min-height: 500px;
 	.description {
-		text-align: left;
+		text-align: center;
 		h2 {
-			font-size: 36px;
-			margin-bottom: 10px;
+			font-size: 32px;
 			color: #000;
+			background: #fc0;
 		}
 		p {
 			width: 80%;
-			font-size: 22px;
-			text-align: left;
-			margin-bottom: 20px;
+			font-size: 18px;
+			text-align: center;
+			margin:0 auto 20px;
+			color: #fc0;
 		}
 	}
 	.block {
@@ -124,6 +125,17 @@ const changeImg = (e: any) => {
 					height: 100%;
 					.img-col {
 						margin: auto;
+						width: 100%;
+						height: 100%;
+						border: 1px solid #f2f2f2;
+						border-radius: 10px;
+						box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+						box-sizing: border-box;
+						padding: 2px;
+						background-color: #fff;
+						display: flex;
+						justify-content: center;
+						align-items: center;
 					}
 					img {
 						max-width: 100%;
@@ -131,7 +143,7 @@ const changeImg = (e: any) => {
 					}
 					.text-col {
 						display: flex;
-						justify-content: center; /* 水平居中 */
+						justify-content: left; /* 水平居中 */
 						align-items: center; /* 垂直居中 */
 					}
 					p {
@@ -142,12 +154,14 @@ const changeImg = (e: any) => {
 						-webkit-box-orient: vertical;
 						text-overflow: ellipsis;
 						overflow: hidden;
+						color: #fc0;
 					}
 				}
 			}
 			li:hover {
 				p {
-					color: var(--el-color-primary);
+					cursor: pointer;
+					// color: var(--el-color-primary);
 				}
 			}
 		}
@@ -157,14 +171,23 @@ const changeImg = (e: any) => {
 		}
 	}
 }
-.el-image {
+::v-deep .el-image {
 	height: 480px;
+	width: 100%;
 	border: 1px solid #f2f2f2;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-	img {
-		height: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	background-color: #fff;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	.el-image__inner {
+		height: auto;
+		width: auto;
+		max-width: 100%;
+		max-height: 100%;
 	}
 }
 </style>

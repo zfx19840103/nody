@@ -5,7 +5,6 @@ import { useRouter } from "vue-router";
 const route = useRouter();
 
 import Header from "./header.vue";
-import Footer from "./footer.vue";
 import src11 from "/src/assets/produst_list_1.1.jpg";
 import src12 from "/src/assets/produst_list_1.2.jpg";
 import src21 from "/src/assets/produst_list_2.1.jpg";
@@ -15,8 +14,6 @@ import src41 from "/src/assets/produst_list_4.1.jpg";
 import src42 from "/src/assets/produst_list_4.2.jpg";
 import src51 from "/src/assets/produst_list_5.1.jpg";
 import src61 from "/src/assets/produst_list_6.1.jpg";
-
-const activeIndex = ref("projects");
 
 const projectList = [
 	[
@@ -78,7 +75,8 @@ const projectList = [
 	]
 ];
 
-let id = parseInt(route.currentRoute.value.query.id);
+let id:any = route.currentRoute.value.query.id;
+
 let data = projectList[id - 1];
 </script>
 
@@ -91,13 +89,13 @@ let data = projectList[id - 1];
 					<div v-for="(item, index) in data" :key="index" class="project-item">
 						<div class="project-img" :style="{ backgroundImage: `url(${item.img})` }"></div>
 						<div class="project-info"></div>
-						<div class="project-name">{{ item.name }}</div>
+						<!-- <div class="project-name">{{ item.name }}</div> -->
 						<div class="project-desc">{{ item.desc }}</div>
 					</div>
 				</div>
 			</el-main>
 			<el-footer>
-				<Footer />
+
 			</el-footer>
 		</el-container>
 	</div>
@@ -115,16 +113,18 @@ let data = projectList[id - 1];
 
 	.project-item {
 		width: 30%;
-		height: 300px;
+		height: 260px;
 		margin-bottom: 50px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		box-sizing: border-box;
+		border-radius: 10px 10px 0 0;
+		overflow: hidden;
 		.project-img {
 			width: 100%;
 			height: 180px;
 			background-size: cover;
 			background-position: center;
-			border-radius: 10px;
+
 		}
 		.project-info {
 			padding: 10px;

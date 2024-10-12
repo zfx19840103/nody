@@ -1,29 +1,94 @@
 <script setup lang="ts">
-import { ref, reactive } from "vue";
 import { contact } from "../api/content";
+import { reactive, ref } from 'vue'
+import type { FormInstance, FormRules } from 'element-plus'
 
+const ruleFormRef = ref<FormInstance>()
 
 const ruleForm = reactive({
-  firstname: "1",
+	firstname: "",
 	lastname: "",
 	email: "",
 	message: ""
-})
+});
+const rules = reactive<FormRules>({
+	firstname: [
+		{
+			required: true,
+			trigger: "blur"
+		},
+		{
+			min: 1,
+			max: 20,
+			message: "Length should be 1 to 20",
+			trigger: "blur",
 
-const submitForm = () => {
-	console.log(ruleForm);
-	contact(ruleForm)
-		.then((res: any) => {
-			debugger;
-			if (res.code === 0) {
-			} else {
-				console.log("failed");
-			}
-		})
-		.catch((err: any) => {
-			console.log(err);
-		});
-};
+		}
+	],
+	lastname: [
+		{
+			required: true,
+			trigger: "blur"
+		},
+		{
+			min: 1,
+			max: 20,
+			message: "Length should be 1 to 20",
+			trigger: "blur",
+
+		}
+	],
+	email: [
+		{
+			required: true,
+			trigger: "blur"
+		},
+		{
+			type: "email",
+			message: "Please enter a valid email",
+			trigger: "blur",
+
+		}
+	],
+	message: [
+		{
+			required: true,
+			trigger: "blur"
+		},
+		{
+			min: 1,
+			max: 500,
+			message: "Length should be 1 to 500",
+			trigger: "blur",
+
+		}
+	]
+});
+const resetForm = (formEl: FormInstance | undefined) => {
+  if (!formEl) return
+  formEl.resetFields()
+}
+const submitForm = async (formEl: FormInstance | undefined) => {
+  if (!formEl) return
+  await formEl.validate((valid, fields) => {
+    if (valid) {
+      contact(ruleForm)
+				.then((res: any) => {
+					if (res.code === 0) {
+						debugger;
+					} else {
+						console.log("failed");
+					}
+				})
+				.catch((err: any) => {
+					console.log(err);
+				});
+    } else {
+      console.log('error submit!', fields)
+    }
+  })
+}
+
 </script>
 
 <template>
@@ -40,35 +105,40 @@ const submitForm = () => {
 					<img src="../assets/contact-img.png" alt="contact-us" />
 					<h3>Send Us a Message</h3>
 					<p>Please contact us and send us your email</p>
-					<el-button type="primary" size="large">start live chat</el-button>
+					<!-- <el-button type="primary" size="large">start live chat</el-button> -->
 					<p>
 						Email:
 						<span>bjkpl@bjkpl.cn</span>
 					</p>
 				</div>
 			</el-col>
-			<el-col :span="8" :offset="2">
+			<el-col :span="8" :offset="1">
 				<div class="contact-form">
-					<h2>Contact Form</h2>
-					<el-form ref="form" :model="ruleForm" size="large" label-position="top">
-						<el-form-item label="First Name">
-							<el-input v-model="ruleForm.firstname"></el-input>
+					<el-form ref="ruleFormRef" :model="ruleForm" :rules="rules" size="large" label-position="top">
+						<el-form-item label="First Name" prop="firstname">
+							<el-input v-model="ruleForm.firstname" placeholder="Please enter your First Name"></el-input>
 						</el-form-item>
 
-						<el-form-item label="Last Name">
-							<el-input v-model="ruleForm.lastname"></el-input>
+						<el-form-item label="Last Name" prop="lastname">
+							<el-input v-model="ruleForm.lastname" placeholder="Please enter your Last Name"></el-input>
 						</el-form-item>
 
-						<el-form-item label="Email">
-							<el-input v-model="ruleForm.email"></el-input>
+						<el-form-item label="Email" prop="email">
+							<el-input v-model="ruleForm.email" placeholder="Please enter your Email"></el-input>
 						</el-form-item>
 
-						<el-form-item label="Message">
-							<el-input type="textarea" :rows="4" v-model="ruleForm.message"></el-input>
+						<el-form-item label="Message" prop="message">
+							<el-input
+								type="textarea"
+								:rows="4"
+								v-model="ruleForm.message"
+								placeholder="Please enter your Message"
+							></el-input>
 						</el-form-item>
 
 						<el-form-item>
-							<el-button type="primary" @click="submitForm">Submit</el-button>
+							<el-button type="primary" @click="submitForm(ruleFormRef)">submit</el-button>
+							<el-button @click="resetForm(ruleFormRef)">Reset</el-button>
 						</el-form-item>
 					</el-form>
 				</div>
@@ -79,28 +149,25 @@ const submitForm = () => {
 
 <style scoped lang="scss">
 .contactus_placeholder {
-	background-color: #fff;
 	overflow: hidden;
 	min-height: 500px;
-	padding: 30px 0 0;
 }
 
 .description {
 	text-align: center;
-	margin-top: 50px;
 }
 
 .description h2 {
-	font-size: 36px;
+	font-size: 32px;
 	color: #000;
-	margin-bottom: 20px;
+	background: #fc0;
 }
 
 .description p {
 	width: 80%;
 	margin: 0 auto;
-	font-size: 22px;
-	color: #333;
+	font-size: 18px;
+	color: #fc0;
 	margin-bottom: 40px;
 }
 
@@ -113,12 +180,12 @@ const submitForm = () => {
 	}
 	h3 {
 		font-size: 24px;
-		color: #333;
+		color: #fc0;
 		margin-bottom: 10px;
 	}
 	p {
 		font-size: 16px;
-		color: #666;
+		color: #fc0;
 		margin-bottom: 20px;
 	}
 	.el-button {
@@ -133,7 +200,7 @@ const submitForm = () => {
 	h2 {
 		text-align: left;
 		font-size: 20px;
-		color: #333;
+		color: #fc0;
 		margin-bottom: 20px;
 	}
 	.el-form-item {
@@ -141,6 +208,10 @@ const submitForm = () => {
 	}
 	.el-input {
 		width: 100%;
+	}
+	::v-deep .el-form--large.el-form--label-top .el-form-item .el-form-item__label {
+		color: #fc0;
+    font-weight: 700;
 	}
 }
 </style>

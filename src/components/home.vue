@@ -37,28 +37,6 @@ let content = ref({
 <template>
 	<div class="home_placeholder">
 		<el-row>
-			<el-col :span="11" :offset="1">
-				<div class="description">
-					<h2>
-						Create Amazing Landing Page With
-						<el-text class="highlight" size="large" type="primary">科普勒</el-text>
-					</h2>
-					<h3>BEIJING KPL COMPANY PROFILE COMPANY PROFILE TECHNOLOGY CO., LTD</h3>
-					<h4>WHAT WE DO?</h4>
-					<p>SCOPE OF PRODUCT SPECIALIZATION</p>
-					<p>
-						<strong>EXCAVATORS</strong>
-						<strong>LOADERS</strong>
-						<strong>GRADERS</strong>
-						<strong>FOKLIFTS</strong>
-						<strong>GENERATOR SETS</strong>
-						<strong>ENERGY STORAGE SYSTEMS</strong>
-						<strong>AGRICULTURAL EQUIPMENTS</strong>
-						<strong>WELDING MACHINES</strong>
-						<strong>WATER PUMPS</strong>
-					</p>
-				</div>
-			</el-col>
 			<el-col :span="10" :offset="1">
 				<div class="block">
 					<el-image :src="content.home_banner">
@@ -71,20 +49,47 @@ let content = ref({
 					</el-image>
 				</div>
 			</el-col>
+			<el-col :span="12" >
+				<div class="description">
+					<div class="text">
+						<h2>
+							Create Amazing With
+							<el-text class="highlight" size="large" type="primary">科普勒</el-text>
+						</h2>
+						<h3>BEIJING KPL COMPANY PROFILE COMPANY PROFILE <br>TECHNOLOGY CO., LTD</h3>
+						<h4>WHAT WE DO?</h4>
+						<p>SCOPE OF PRODUCT SPECIALIZATION</p>
+						<p>
+							<strong>EXCAVATORS</strong>
+							<strong>LOADERS</strong>
+							<strong>GRADERS</strong>
+							<strong>FOKLIFTS</strong>
+							<strong>GENERATOR SETS</strong>
+						</p>
+						<p>
+							<strong>ENERGY STORAGE SYSTEMS</strong>
+							<strong>AGRICULTURAL EQUIPMENTS</strong>
+						</p>
+						<p>
+							<strong>WELDING MACHINES</strong>
+							<strong>WATER PUMPS</strong>
+						</p>
+					</div>
+				</div>
+			</el-col>
 		</el-row>
 	</div>
 </template>
 
 <style scoped lang="scss">
 .home_placeholder {
-	background-color: #fff;
-	padding-top: 30px;
+	background: linear-gradient(to bottom, #000 0%, #000 100%);
+	opacity: 0.9;
+	padding: 30px 50px;
 }
 .home_placeholder .block {
-	margin-top: 50px;
 	text-align: right;
 	display: inline-block;
-	width: 100%;
 	box-sizing: border-box;
 	vertical-align: top;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -92,39 +97,54 @@ let content = ref({
 	overflow: hidden;
 }
 .home_placeholder .description {
-	padding: 50px 0 0;
 	display: inline-block;
 	color: var(--el-text-color-secondary);
 	text-align: left;
-	width: 100%;
 	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	.text {
+		position: relative;
+		top:10%;
+		box-shadow: 0px 0px 4px 0px rgb(204, 204, 204);
+		background: #fc0;
+		padding: 20px 20px 20px 50px;
+		border-radius: 0 10px 10px 0;
+		margin-left: -50px;
+		box-sizing: border-box;
+		height: 80%;
+		z-index: 1;
+	}
 	h2 {
-		padding: 10px 0 0;
-		color: #333333;
-		font-size: 44px;
+		margin: 0.8rem 0 0;
+		color: #000;
+		font-size: 1.8rem;
 		text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.15);
 		.highlight {
+			font-size: 2.5rem;
 			font-weight: bold;
-			font-size: 44px;
+			color: #000;
+			display: inline-block;
 		}
 	}
 	h3 {
-		color: #9b9bae !important;
-		font-size: 24px;
-		margin-top: 10px;
+		color: #000;
+		font-size: 1.4rem;
+		margin: 1rem 0 0;
 	}
 	h4 {
-		color: #9b9bae !important;
-		font-size: 21px;
-		margin: 0;
-		font-weight: 700;
+		color: #000;
+		font-size: 1.4rem;
+		font-weight: 500;
+		margin: 2rem 0 1rem;
 	}
 	p {
-		font-size: 18px;
-		margin-top: 10px;
+		color: #000;
+		font-size: 1rem;
+		margin: 0.5rem 0 0;
 		word-break: break-all;
 		strong {
-			font-weight: 500;
+			font-weight: 300;
 			margin-right: 20px;
 		}
 	}
@@ -136,7 +156,6 @@ let content = ref({
 	max-width: 100%;
 	max-height: 550px;
 	transition: all 0.3s ease;
-	
 }
 .home_placeholder .el-image:hover {
 	transform: scale(1.05);
