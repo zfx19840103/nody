@@ -6,7 +6,7 @@
 		<el-row>
 			<el-col :span="24">
 				<div class="description">
-					<h2>other Products</h2>
+					<h2>Other Products</h2>
 					<p>
 						We offer seamless docking
 						services to ensure smooth

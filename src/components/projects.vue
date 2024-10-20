@@ -13,7 +13,7 @@ const routerPush = (p0: number) => {
 			<el-col :span="24">
 				<div class="description">
 					<h2>Latest Products</h2>
-					<p>Our generator can be used in construction, construction, mining, oil fields, medical equipment, data centers, municipal facilities, vehicle modifications, recreational vehicles, agricultural production, spare lighting, etc.</p>
+					<p>Our generator can be used in construction, mining, oil fields, medical equipment, data centers, municipal facilities, vehicle modifications, recreational vehicles, agricultural production, spare lighting, etc.</p>
 				</div>
 			</el-col>
 			<el-col :span="24">

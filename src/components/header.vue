@@ -18,10 +18,10 @@ const linkHref = (val: string) => {
 				<div class="header-links">
 					<el-anchor-link :href="linkHref('#Home')">Home</el-anchor-link>
 					<el-anchor-link href='#Generators'>Generators</el-anchor-link>
-					<el-anchor-link :href="linkHref('#OtherProducts')">OtherProducts</el-anchor-link>
+					<el-anchor-link :href="linkHref('#OtherProducts')">Other Products</el-anchor-link>
 					<el-anchor-link :href="linkHref('#Services')">Services</el-anchor-link>
-					<el-anchor-link :href="linkHref('#AboutUs')">AboutUs</el-anchor-link>
-					<el-anchor-link :href="linkHref('#ContactUs')">ContactUs</el-anchor-link>
+					<el-anchor-link :href="linkHref('#AboutUs')">About Us</el-anchor-link>
+					<el-anchor-link :href="linkHref('#ContactUs')">Contact Us</el-anchor-link>
 				</div>
 			</el-anchor>
 		</el-affix>

@@ -1,4 +1,4 @@
-e8e8e8<script setup lang="ts">
+<script setup lang="ts">
 import { ref } from "vue";
 </script>
 
@@ -10,15 +10,12 @@ import { ref } from "vue";
 				<div class="description">
 					<h2>Services</h2>
 					<p>
-						We offer seamless docking
-						services to ensure smooth
-						project execution. Additionally,
-						we provide optional logistics
-						and warehousing solutions to
-						enhance cargo turnover
-						efficiency and reduce
-						operational costs for our
-						customers.
+						We offer a range of services to
+						help our customers achieve their
+						goals. Whether it's installing
+						new machines or upgrading existing
+						ones, we can help you achieve your
+						dreams.
 					</p>
 				</div>
 			</el-col>

@@ -53,17 +53,17 @@ let content = ref({
 				<div class="description">
 					<div class="text">
 						<h2>
-							Create Amazing With
+							Create amazing products with
 							<el-text class="highlight" size="large" type="primary">科普勒</el-text>
 						</h2>
-						<h3>BEIJING KPL COMPANY PROFILE COMPANY PROFILE <br>TECHNOLOGY CO., LTD</h3>
+						<h3>BEIJING KPL TECHNOLOGY CO.,LTD COMPANY PROFILE</h3>
 						<h4>WHAT WE DO?</h4>
 						<p>SCOPE OF PRODUCT SPECIALIZATION</p>
 						<p>
 							<strong>EXCAVATORS</strong>
 							<strong>LOADERS</strong>
 							<strong>GRADERS</strong>
-							<strong>FOKLIFTS</strong>
+							<strong>Forklifts</strong>
 							<strong>GENERATOR SETS</strong>
 						</p>
 						<p>

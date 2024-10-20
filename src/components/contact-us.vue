@@ -97,7 +97,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
 			<el-col :span="24">
 				<div class="description">
 					<h2>Contact Us</h2>
-					<p>If you have any needs, please contact us promptly. Our one-stop service team will provide you with the best service</p>
+					<p>If you have any inquiries, please contact us. Our one-stop service team will provide you with the best service</p>
 				</div>
 			</el-col>
 			<el-col :span="13">
