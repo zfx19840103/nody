@@ -29,7 +29,7 @@
 									<img src="../assets/2-31.jpg" />
 								</div>
 							</div>
-							<p>Gasoline portable digital generator</p>
+							<p>AGRICULTURAL MACHINERY</p>
 						</div>
 					</li>
 					<li>
@@ -39,7 +39,7 @@
 									<img src="../assets/2-32.jpg" />
 								</div>
 							</div>
-							<p>General purpose gasoline generator</p>
+							<p>ENERGY STORAGE POWER SUPPLY</p>
 						</div>
 					</li>
 					<li>
@@ -49,7 +49,7 @@
 									<img src="../assets/2-33.jpg" />
 								</div>
 							</div>
-							<p>General purpose diesel generator</p>
+							<p>EXCAVATOR</p>
 						</div>
 					</li>
 					<li>
@@ -59,7 +59,7 @@
 									<img src="../assets/2-34.jpg" />
 								</div>
 							</div>
-							<p>DC charging station for UAV</p>
+							<p>FORKLIFT</p>
 						</div>
 					</li>
 					<li>
@@ -69,7 +69,7 @@
 									<img src="../assets/2-35.jpg" />
 								</div>
 							</div>
-							<p>Large-scale diesel power station</p>
+							<p>LOADER</p>
 						</div>
 					</li>
 					<li>
@@ -79,7 +79,7 @@
 									<img src="../assets/2-36.jpg" />
 								</div>
 							</div>
-							<p>Gasoline water pump</p>
+							<p>WELDING MACHINERY</p>
 						</div>
 					</li>
 				</ul>
