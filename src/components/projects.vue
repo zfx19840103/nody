@@ -2,8 +2,8 @@
 import { useRouter } from "vue-router";
 const router = useRouter();
 
-const routerPush = (p0: number) => {
-	router.push(`/projectList?id=${p0}#Generators`);
+const routerPush = (p0: number, desc: string) => {
+	router.push(`/projectList?id=${p0}&desc=${desc}#Generators`);
 };
 </script>
 
@@ -18,7 +18,7 @@ const routerPush = (p0: number) => {
 			</el-col>
 			<el-col :span="24">
 				<ul class="projects_list">
-					<li @click="routerPush(1)">
+					<li @click="routerPush(1, 'Gasoline portable digital generator')">
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
@@ -29,7 +29,7 @@ const routerPush = (p0: number) => {
 							<p>Gasoline portable digital generator</p>
 						</div>
 					</li>
-					<li  @click="routerPush(2)">
+					<li  @click="routerPush(2, 'General purpose gasoline generator')">
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
@@ -40,7 +40,7 @@ const routerPush = (p0: number) => {
 							<p>General purpose gasoline generator</p>
 						</div>
 					</li>
-					<li  @click="routerPush(3)">
+					<li  @click="routerPush(3, 'Smart Digital Inverter Generator')">
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
@@ -51,7 +51,7 @@ const routerPush = (p0: number) => {
 							<p>Smart Digital Inverter Generator</p>
 						</div>
 					</li>
-					<li  @click="routerPush(4)">
+					<li  @click="routerPush(4, 'DC charging station for UAV')">
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
@@ -62,7 +62,7 @@ const routerPush = (p0: number) => {
 							<p>DC charging station for UAV</p>
 						</div>
 					</li>
-					<li  @click="routerPush(5)">
+					<li  @click="routerPush(5, 'Large-scale diesel power station')">
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">
@@ -73,7 +73,7 @@ const routerPush = (p0: number) => {
 							<p>Large-scale diesel power station</p>
 						</div>
 					</li>
-					<li  @click="routerPush(6)">
+					<li  @click="routerPush(6, 'Gasoline water pump')">
 						<div class="libg">
 							<div class="icon">
 								<div class="icon-bg">

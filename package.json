@@ -19,6 +19,7 @@
     "jsonwebtoken": "^9.0.2",
     "mysql": "^2.18.1",
     "normalize.css": "^8.0.1",
+    "pptxjs": "^0.0.0",
     "ts-node": "^10.9.2",
     "vue": "^3.4.29",
     "vue-router": "4",
