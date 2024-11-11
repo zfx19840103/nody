@@ -5,7 +5,6 @@ import { ArrowRight } from '@element-plus/icons-vue'
 
 const route = useRouter();
 
-import Header from "./header.vue";
 import src11 from "/src/assets/produst_list_1.1.jpg";
 import src12 from "/src/assets/produst_list_1.2.jpg";
 import src21 from "/src/assets/produst_list_2.1.jpg";
