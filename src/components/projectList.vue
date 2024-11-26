@@ -104,10 +104,12 @@ let name:any = ref<any>('');
 let detailData:any = ref<any>([]),
 	isProjectDetail: any = ref(false);
 
+let detailDataImg:any = ref<any>('');
 const projectDetail = (item:any) => {
 	detailData.value = item.detail;
 	isProjectDetail.value = true;
 	name.value = item.desc;
+	detailDataImg.value = item.detail;
 }
 const goback = () => {
 	isProjectDetail.value = false;
@@ -126,32 +128,48 @@ const goback = () => {
 					<el-breadcrumb-item v-show="isProjectDetail">{{ name }}</el-breadcrumb-item>
 				</el-breadcrumb>
 				<div class="project-list" id="Generators">
-					<div v-for="(item, index) in data" :key="index" class="project-item" @click="projectDetail(item)" >
+					<div v-show="!isProjectDetail" v-for="(item, index) in data" :key="index" class="project-item" @click="projectDetail(item)" >
 						<div v-show="!isProjectDetail" class="project-img" :style="{ backgroundImage: `url(${item.img})` }"></div>
 						<div v-show="!isProjectDetail" class="project-info"></div>
 						<div v-show="!isProjectDetail" class="project-desc">{{ item.desc }}</div>
-						<div v-show="isProjectDetail && name === item.desc" class="project-detail">
-							<img :src="item.detail" alt=""></div>
+						<!-- <div v-show="isProjectDetail && name === item.desc" class="project-detail">
+							<img :src="item.detail" alt=""></div> -->
 					</div>
 				</div>
+				<div v-show="isProjectDetail" class="project-detail">
+					<img :src="detailDataImg" alt=""></div>
 			</el-main>
-			<el-footer>
-
-			</el-footer>
 		</el-container>
 	</div>
 </template>
 
 <style scoped lang="scss">
+.common-layout {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+}
+.el-container {
+	height: 100%;
+}
+::v-deep .el-breadcrumb__item span.el-breadcrumb__inner {
+	color: #fff;
+}
+::v-deep .el-breadcrumb__item span.el-breadcrumb__inner:hover {
+	color: #fc0;
+}
+.project-list .project-item:hover {
+		background: #fc0;
+	}
 .project-list {
+	position: relative;
+	z-index: 1;
 	max-width: 1200px;
-	min-height: 60vh;
 	margin: 0 auto;
 	padding: 50px 0 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-
 	.project-item {
 		width: 30%;
 		height: 260px;
@@ -160,6 +178,8 @@ const goback = () => {
 		box-sizing: border-box;
 		border-radius: 10px 10px 0 0;
 		overflow: hidden;
+		background: #fff;
+		cursor: pointer;
 		.project-img {
 			width: 100%;
 			height: 180px;
@@ -181,14 +201,13 @@ const goback = () => {
 	}
 }
 .project-detail {
-	position: absolute;
+	position: relative;
+	z-index: 0;
 	top: 0;
 	left: 50%;
 	width: 100%;
 	max-width: 1200px;
-	min-height: 60vh;
 	margin-left: -600px;
-	padding: 70px 0 0;
 	img {
 		width: 100%;
 	}
